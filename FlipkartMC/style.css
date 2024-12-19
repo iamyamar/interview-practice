@@ -1,0 +1,48 @@
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.maze {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+    font-weight: bold;
+}
+
+.wall { background-color: #333; }
+.path { background-color: #ffd700; }
+.source { background-color: #90EE90; }
+.destination { background-color: #FF6B6B; }
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 60px;
+    padding: 5px;
+    margin: 5px;
+}

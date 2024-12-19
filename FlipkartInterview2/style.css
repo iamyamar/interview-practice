@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap:20px;
+    width: 80%;
+}
+
+.product-list-container, .review-form-container {
+    padding:20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type:none;
+    padding:0;
+}
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color:#fff;
+    padding:10px;
+    border-radius:5px;
+    font-size:14px;
+}
+
+#error-state, #loading-state {
+    color:#d9534f;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel='stylesheet' href='style.css' />
+</head>
+<body>
+    <div id='app'>
+        <div class='product-list-container'>
+            <h2>Products</h2>
+            <ul id='product-list'></ul>
+            <p id='loading-state' hidden>Loading...</p>
+            <p id='error-state' hidden>Error Loading Products<button onclick='fetchProducts()'>Retry</button></p>
+        </div>
+        <div class='review-form-container' hidden>
+            <h2>Review</h2>
+            <form id='review-form'>
+                <div id='step-1'>
+                    <label for='rating'>Rating (1-5):</label>
+                    <input type='number' id='rating' min='1' max='5' required>
+                    <button type='button' onclick='nextStep()'>Next</button>
+                </div>
+                <div id='step-2' hidden>
+                    <p>Your rating: <span id='display-rating'></span></p>
+                    <label for='review-text'>Review:</label>
+                    <textarea id='review-text' maxlength='100' oninput='checkReviewText()'></textarea>
+                    <p id='char-count'>0/100</p>
+                    <button type='button' onclick='prevStep()'>Previous</button>
+                    <button type='button' onclick='submitReview()'>Submit</button>
+                </div>
+            </form>
+        </div>
+        <div id='toast' hidden>REview for product submitted successfully</div>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
